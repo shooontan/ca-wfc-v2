@@ -1,6 +1,7 @@
 import { h } from 'hyperapp';
 import { StaticFetch } from 'hyperstatic';
 import { ComicReader } from '@/components/ComicReader';
+import { handleComic, handleError } from './comics.action';
 
 import './style.css';
 
@@ -13,25 +14,8 @@ export default props => (
 export const Init = state => [
   state,
   StaticFetch({
-    url: 'https://wfc2-image-api-259809.appspot.com/api/books/D2rzfW7j/',
-    action: HandleComic,
-    // TODO: error handle
-    // error: HandleError,
+    url: `https://wfc2-image-api-259809.appspot.com/api/books/${state.location.queryParams.bookId}/`,
+    action: handleComic,
+    error: handleError,
   }),
 ];
-
-const HandleComic = (state, response) => {
-  const { path } = state.location;
-  return {
-    ...state,
-    pageData: {
-      ...state.pageData,
-      [path]: {
-        ...state.pageData[path],
-        ...response,
-        // display image index
-        currentPage: 0,
-      },
-    },
-  };
-};
