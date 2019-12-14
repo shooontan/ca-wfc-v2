@@ -17,27 +17,34 @@ import './ComicReader.css';
  */
 const ComicReader = props => {
   const { path } = props.location;
-  const pageData = props.pageData[path];
+  const pageData = props.pageData?.[path];
+
+  const currentPage = pageData.currentPage || 0;
+  const comic = pageData?.imageData?.[currentPage];
 
   // TODO: skeleton placeholder card
 
-  const images = (pageData.imageData || []).map(comic => (
-    <ComicImage
-      src={comic.imageUrl}
-      width={pageData.width || 0}
-      height={pageData.height || 0}
-    />
-  ));
-
   return (
     <div class="components-comic-reader">
-      <ComicButton next clickAction={NextPage}>
+      <ComicButton
+        next
+        clickAction={NextPage}
+        disabled={currentPage >= pageData.pageNum}
+      >
         {'<'}
       </ComicButton>
       <div class="components-comic-reader-image">
-        {images[pageData.currentPage]}
+        {comic && (
+          <ComicImage
+            src={comic.imageUrl}
+            width={pageData.width || 0}
+            height={pageData.height || 0}
+          />
+        )}
       </div>
-      <ComicButton clickAction={PrePage}>{'>'}</ComicButton>
+      <ComicButton clickAction={PrePage} disabled={currentPage <= 0}>
+        {'>'}
+      </ComicButton>
     </div>
   );
 };

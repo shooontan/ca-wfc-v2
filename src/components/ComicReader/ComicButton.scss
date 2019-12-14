@@ -9,5 +9,10 @@
     background: $color-dark;
     border: none;
     cursor: pointer;
+
+    &.disabled {
+      background: transparent;
+      pointer-events: none;
+    }
   }
 }
