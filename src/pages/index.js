@@ -1,11 +1,14 @@
 import { h } from 'hyperapp';
-import { Link } from 'hyperstatic';
+import Link from '@/components/Link';
 
-export default () => (
+export default props => (
   <div>
     <p>
       home
-      <Link to="/comics">comics</Link>!
+      <Link to="/comics" state={props.state}>
+        comics
+      </Link>
+      !
     </p>
   </div>
 );
