@@ -3,16 +3,25 @@
     "@babel/preset-env"
   ],
   "plugins": [
-    ["@babel/plugin-transform-react-jsx", {
-      "pragma": "h"
-    }],
-    ["module-resolver", {
-      "root": [
-        "."
-      ],
-      "alias": {
-        "@": "./src"
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h"
       }
-    }]
+    ],
+    [
+      "@babel/plugin-proposal-optional-chaining"
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "."
+        ],
+        "alias": {
+          "@": "./src"
+        }
+      }
+    ]
   ]
 }
