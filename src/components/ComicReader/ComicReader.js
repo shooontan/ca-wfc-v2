@@ -19,7 +19,8 @@ const ComicReader = props => {
   const { path } = props.location;
   const pageData = props.pageData?.[path];
 
-  const currentPage = pageData.currentPage || 0;
+  const currentPage = pageData?.currentPage || 0;
+  const allPage = pageData?.pageNum || 0;
   const comic = pageData?.imageData?.[currentPage];
 
   // TODO: skeleton placeholder card
@@ -29,7 +30,7 @@ const ComicReader = props => {
       <ComicButton
         next
         clickAction={NextPage}
-        disabled={currentPage >= pageData.pageNum}
+        disabled={currentPage >= allPage}
       >
         {'<'}
       </ComicButton>

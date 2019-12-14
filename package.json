@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@hyperapp/events": "0.0.3",
+    "@hyperapp/http": "0.0.2",
+    "hyperapp": "git+https://github.com/shooontan/hyperapp.git#patch/not-function",
     "hyperstatic": "^0.2.7"
   },
   "devDependencies": {
