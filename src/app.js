@@ -8,6 +8,6 @@ hyperstatic({
   routes,
   init,
   view,
-  subscriptions: () => [],
+  subscriptions: state => [console.log(state)],
   node: document.getElementById('app'),
 });
