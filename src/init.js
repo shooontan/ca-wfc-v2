@@ -1,1 +1,3 @@
-export const init = {};
+export const init = {
+  darkMode: false,
+};

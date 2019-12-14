@@ -1,4 +1,5 @@
 import { h } from 'hyperapp';
+import Link from '@/components/Link';
 import { ComicList } from '@/components/ComicList';
 
 import './style.scss';
@@ -13,6 +14,7 @@ export default props => {
 
   return (
     <div class={{ pages: true, top: true }}>
+      <Link to="/setting">setting</Link>
       <ComicList comics={comics} />
     </div>
   );
