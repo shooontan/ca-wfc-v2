@@ -1,6 +1,8 @@
 import { h } from 'hyperapp';
 import { preventDefault } from '@hyperapp/events';
 
+import './ComicButton.scss';
+
 /**
  * Pagenation Button fo Comic Viewer
  *
@@ -11,16 +13,18 @@ import { preventDefault } from '@hyperapp/events';
  */
 const ComicButtonBase = (props, children) => {
   return (
-    <button
-      class={{
-        'components-comic-button-base': true,
-        next: props.next,
-        pre: !props.next,
-      }}
-      onClick={preventDefault(props.clickAction)}
-    >
-      {children}
-    </button>
+    <div class="components-comic-button">
+      <button
+        class={{
+          'components-comic-button-base': true,
+          next: props.next,
+          pre: !props.next,
+        }}
+        onClick={preventDefault(props.clickAction)}
+      >
+        {children}
+      </button>
+    </div>
   );
 };
 

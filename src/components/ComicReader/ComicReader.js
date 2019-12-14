@@ -1,5 +1,5 @@
 import { h } from 'hyperapp';
-import { theme } from '@/styles/color';
+// import { theme } from '@/styles/color';
 import ComicImage from './ComicImage';
 import ComicButton from './ComicButton';
 import { NextPage, PrePage } from '@/actions/pagingActions';
@@ -34,7 +34,9 @@ const ComicReader = props => {
       <ComicButton next clickAction={NextPage}>
         {'<'}
       </ComicButton>
-      {images[pageData.currentPage]}
+      <div class="components-comic-reader-image">
+        {images[pageData.currentPage]}
+      </div>
       <ComicButton clickAction={PrePage}>{'>'}</ComicButton>
     </div>
   );

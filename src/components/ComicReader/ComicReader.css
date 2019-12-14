@@ -1,3 +1,10 @@
 .components-comic-reader {
   position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.components-comic-reader-image {
+  flex: 1;
+  text-align: center;
 }
