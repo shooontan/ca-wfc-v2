@@ -23,12 +23,14 @@ import Link from '@/components/Link';
  */
 const ComicListItem = props => {
   return (
-    <Link to={props.to}>
-      <div class="components-comic-list-item">
+    <Link to={props.to} class="components-comic-list-item">
+      <div class="components-comic-list-inner">
         <img src={props.seriesImage} />
         <div class="components-comic-list-item-detail">
-          <p clsas="components-comic-list-item-title">{props.title}</p>
-          <p>{props.description}</p>
+          <p class="components-comic-list-item-title">{props.title}</p>
+          <p class="components-comic-list-item-description">
+            {props.description}
+          </p>
           <div>
             <p>{props.publisher}</p>
             <p>{props.author}</p>

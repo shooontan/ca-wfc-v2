@@ -1,6 +1,7 @@
 import { h } from 'hyperapp';
-import { StaticFetch } from 'hyperstatic';
 import { ComicList } from '@/components/ComicList';
+
+import './style.scss';
 
 export default props => {
   const { path } = props.location;
