@@ -14,3 +14,7 @@ hyperstatic({
   subscriptions: state => [console.log(state)],
   node: document.getElementById('app'),
 });
+
+if (process.env.NODE_ENV === 'production') {
+  navigator.serviceWorker.register(`${window.location.origin}/sw.js`);
+}
