@@ -1,12 +1,12 @@
 import { h } from 'hyperapp';
 import { StaticFetch } from 'hyperstatic';
 import { ComicReader } from '@/components/ComicReader';
-import { handleComic, handleError } from './comics.action';
+import { handleComic, handleError } from './viewer.action';
 
 import './style.css';
 
 export default props => (
-  <div class={{ pages: true, comics: true }}>
+  <div class={{ pages: true, viewer: true }}>
     <ComicReader {...props} />
   </div>
 );
