@@ -1,0 +1,13 @@
+@import "../../styles/color.scss";
+
+.components-comic-button {
+  width: 100px;
+
+  &-base {
+    width: 100%;
+    height: 100%;
+    background: $color-dark;
+    border: none;
+    cursor: pointer;
+  }
+}

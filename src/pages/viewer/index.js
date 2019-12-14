@@ -3,7 +3,7 @@ import { StaticFetch } from 'hyperstatic';
 import { ComicReader } from '@/components/ComicReader';
 import { handleComic, handleError } from './viewer.action';
 
-import './style.css';
+import './style.scss';
 
 export default props => (
   <div class={{ pages: true, viewer: true }}>
