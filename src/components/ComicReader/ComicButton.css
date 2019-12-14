@@ -1,0 +1,12 @@
+.components-comic-button-base {
+  position: absolute;
+  top: 50%;
+}
+
+.components-comic-button-base.next {
+  left: 30px;
+}
+
+.components-comic-button-base.pre {
+  right: 30px;
+}

@@ -4,6 +4,9 @@ import { routes } from './routes';
 import { init } from './init';
 import { view } from './layouts/view';
 
+// style
+import './styles/global.css';
+
 hyperstatic({
   routes,
   init,
