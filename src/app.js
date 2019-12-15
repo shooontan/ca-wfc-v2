@@ -10,7 +10,7 @@ import './styles/global.css';
 
 hyperstatic({
   routes,
-  init,
+  init: init(),
   view,
   subscriptions,
   node: document.getElementById('app'),

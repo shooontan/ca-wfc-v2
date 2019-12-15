@@ -1,1 +1,6 @@
-export const init = {};
+export const init = () => ({
+  voice: {
+    active: false,
+    enable: !!SpeechRecognition,
+  },
+});
