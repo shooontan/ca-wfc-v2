@@ -1,7 +1,8 @@
 import { onKeyDown } from '@hyperapp/events';
-import * as pagingActions from '@/actions/pagingActions';
+import * as comicReaderActions from '@/actions/comicReaderActions';
 
 const keycode = {
+  escape: 27,
   left: 37,
   up: 38,
   right: 39,
@@ -12,12 +13,17 @@ export const is = state => state.location?.path === '/viewer';
 
 export const factor = () =>
   onKeyDown((state, result) => {
+    if (result.keyCode === keycode.escape) {
+      window?.history?.back();
+      return state;
+    }
+
     if (result.keyCode === keycode.left) {
-      return pagingActions.NextPage;
+      return comicReaderActions.NextPage;
     }
 
     if (result.keyCode === keycode.right) {
-      return pagingActions.PrePage;
+      return comicReaderActions.PrePage;
     }
 
     return state;

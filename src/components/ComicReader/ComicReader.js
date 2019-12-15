@@ -2,7 +2,8 @@ import { h } from 'hyperapp';
 // import { theme } from '@/styles/color';
 import ComicImage from './ComicImage';
 import ComicButton from './ComicButton';
-import { NextPage, PrePage } from '@/actions/pagingActions';
+import ComicCloseButton from './ComicCloseButton';
+import { NextPage, PrePage } from '@/actions/comicReaderActions';
 
 import './ComicReader.css';
 
@@ -27,6 +28,7 @@ const ComicReader = props => {
 
   return (
     <div class="components-comic-reader">
+      <ComicCloseButton />
       <ComicButton
         next
         clickAction={NextPage}
