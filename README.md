@@ -10,6 +10,17 @@ $ npm -v
 6.13.4
 ```
 
+## Features
+
+- Lighter build files
+- Voice page controller
+
+### Targets
+
+- Chrome (PC)
+
+no support for Edge, Firefox, IE, Opera, Safari.
+
 ## Development
 
 ```bash
