@@ -1,4 +1,4 @@
-# ca-wfc-v2
+# CA-WFC-v2
 
 :warning: Hackathon Product :warning:
 
@@ -21,5 +21,5 @@ npm run dev # localhost:3000
 
 ```bash
 npm run build # generate build files
-npm run render-pages # prerender pages
+# npm run render-pages # prerender pages
 ```
