@@ -9,13 +9,14 @@
     "render-pages": "npm run build && node ./src/render-pages.js",
     "prebuild": "rm -rf .cache && rm -rf dist",
     "postbuild": "cp static/* dist/",
+    "preinstall": "npx npm-force-resolutions",
     "lint": "eslint --ext .js ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@hyperapp/events": "0.0.3",
     "@hyperapp/http": "0.0.2",
-    "hyperapp": "git+https://github.com/shooontan/hyperapp.git#patch/not-function",
+    "hyperapp": "^2.0.3",
     "hyperstatic": "^0.2.7"
   },
   "devDependencies": {
@@ -37,6 +38,9 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "sass": "^1.23.7"
+  },
+  "resolutions": {
+    "hyperapp": "git+https://github.com/shooontan/hyperapp.git#patch/not-function"
   },
   "alias": {
     "@": "./src"
